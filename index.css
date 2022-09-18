@@ -1,0 +1,304 @@
+/* 预设样式 */
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    /* 全局文字不可选中 */
+    user-select: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+@font-face {
+    font-family: "Third party fonts";
+    font-weight: 250;
+    src: url("https://at.alicdn.com/wf/webfont/IaC0kmQ54wUI/LpoV1jGWUbSNi15zc8cLg.woff2") format("woff2"),
+    url("https://at.alicdn.com/wf/webfont/IaC0kmQ54wUI/hAfarA5gPUHlEICuMY5cR.woff") format("woff");
+    font-display: swap;
+}
+
+/* 正式样式 */
+.one {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#330867, #30cfd0);
+}
+
+/* 首页 */
+.home-page {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 首页居中内容 */
+.middle {
+    width: 300px;
+    height: 600px;
+    position: relative;
+}
+
+/* 头像 */
+.head-portrait {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.head-portrait a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.head-portrait a img {
+    width: 104%;    
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+/* 个人主页-文字信息 */
+.written-message {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: "Third party fonts";
+}
+
+.written-message .a {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.written-message .b {
+    font-size: 14px;
+    /* 字与字间距 */
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.written-message .c {
+    border: 0.5px solid rgba(221, 221, 221, .1);
+    width: 250px;
+    margin: 0 auto;
+}
+
+.written-message .d {
+    font-size: 12px;
+    margin: 20px 0 10px;
+}
+
+.written-message .e {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 博客 项目 友链 关于 */
+.list {
+    position: absolute;
+    top: 68%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    font-family: "Third party fonts";
+}
+
+.list div {
+    margin-right: 5px;
+}
+
+.list div a {
+    display: block;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    transition: font-size .1s linear;
+}
+
+.list div a:hover {
+    font-size: 16px;
+}
+
+.list div:last-child {
+    margin-right: 0;
+}
+
+/* 首页 图标 */
+.home-page-icon {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.home-page-icon a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.home-page-icon a:hover span {
+    font-size: 24px;
+}
+
+.home-page-icon a:last-child {
+    margin-right: 0;
+}
+
+.home-page-icon a span {
+    font-size: 18px;
+    transition: font-size .1s linear;
+}
+
+/* 下一页图标 */
+.next-page {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    /* 动画 */
+    animation: down 1s infinite alternate;
+}
+
+@keyframes down {
+    from {
+        top:88%
+    }
+
+    to {
+        top:92%
+    }
+}
+
+.next-page span {
+    font-size: 30px;
+}
+
+/* 个人简介 */
+.two {
+    width: 100%;
+    height: 100vh;
+    font-family: "Third party fonts";
+}
+
+/* 左-导航列表 */
+.left-nav-list {
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+/* 列表-头像 */
+.n-l-head-portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.n-l-head-portrait img {
+    width: 104%;    
+    position: absolute;
+    top: -16px;
+    left: 0;
+}
+
+/* 列表选项 */
+.listing-options {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.listing-options ul li {
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.listing-options ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.listing-options ul li:hover a {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    color: #29323c;
+}
+
+/* 右-个人简介信息 */
+.personal-information {
+    width: 80%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.p-i-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.p-i-top-item {
+    color: #29323c;
+    width: 30%;
+}
+
+.p-i-top-item div {
+    color: #29323c;
+    margin: 20px 0;
+}
